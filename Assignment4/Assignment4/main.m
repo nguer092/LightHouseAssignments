@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Tester.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -14,15 +15,15 @@ int main(int argc, const char * argv[]) {
         NSArray *numbers = @[@2, @5, @64, @354, @90, @6, @234];
         
         NSNumber *tester = 0;
-        
+
         for (int i = 0; i < (numbers.count); i++) {
             NSNumber *highest = numbers[i];
-            
+
             if (highest > tester){
                 tester= highest;
             }
         }
-        
+
        NSLog(@"The highest number in this array is %@", tester);
     }
     return 0;
