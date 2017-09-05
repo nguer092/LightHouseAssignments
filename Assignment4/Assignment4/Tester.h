@@ -10,6 +10,6 @@
 
 @interface Tester : NSObject
 
-- (void)tester:(NSArray *)number;
++ (NSNumber *)tester:(NSArray *)number;
 
 @end

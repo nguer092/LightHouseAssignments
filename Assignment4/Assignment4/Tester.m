@@ -10,7 +10,7 @@
 
 @implementation Tester
 
-- (void)tester:(NSArray *)number
++ (NSNumber *)tester:(NSArray *)number;
 
 {
     
@@ -23,8 +23,7 @@
             tester= highest;
         }
     }
-    
-    NSLog(@"The highest number in this array is %@", tester);
+    return tester;
 }
 
 @end
