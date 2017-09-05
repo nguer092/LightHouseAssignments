@@ -12,18 +12,18 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
         int choice;
-        BOOL play = YES;
+        BOOL play = NO;
         char inputChars [255];
         
-        while (play) {
-            
-        NSString *inputString = @"\nInput a string: ";
+        NSString *inputString = @"Input a string: ";
         
         NSLog(@"%@", inputString);
         
         fgets(inputChars, 255, stdin);
         
-        printf("\nYour string is %s\n", inputChars);
+        do {
+        
+        printf("Your string is %s", inputChars);
         
         printf("What would you like to do with this string?\n");
         printf("Make it LOUDER - Type 1\n");
@@ -68,32 +68,51 @@ int main(int argc, const char * argv[]) {
         
         switch (choice) {
             case 1:
+            {
             NSLog(@"Your LOUD STRING IS %@", capitalized);
-            break;
+                break;
+            }
+            
             case 2:
+            {
             NSLog(@"Your smaller string is %@", lower);
-            break;
+                break;
+            }
+            
             case 3:
+            {
             NSLog(@"Your numberized string is %ld", numberize);
+                break;
+            }
+            
             case 4:
+            {
             NSLog(@"Your canadianized string is %@", canadian);
+                break;
+            }
+            
             case 5:
+            {
             if ([inputStringObject containsString:@"?"]){
                 NSLog(@"I dont know.");
             } else if  ([inputStringObject containsString:@"!"]) {
                 NSLog(@" Woah buddy, calm down!");
             };
+                break;
+            }
+            
             case 6:
+            {
             NSLog(@"Your despaced string is %@", despaced);
+                break;
+            }
+            
             break;
-            default:
-            break;
-        }
+                        }
             
         }
 
-        
-        
+        while (play != YES);
         
     }
     return 0;
