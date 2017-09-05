@@ -26,8 +26,39 @@ int main(int argc, const char * argv[]) {
         
         NSString *inputStringObject = [NSString stringWithUTF8String:inputChars];
         
-        NSLog(@"Input was %@", inputStringObject);
+//        Uppercase
         
+        NSString *capitalized = [inputStringObject uppercaseString];
+        NSLog(@"Your LOUD STRING IS %@", capitalized);
+        
+//        Lowercase
+        
+        NSString *lower = [inputStringObject lowercaseString];
+        NSLog(@"Your smaller string is %@", lower);
+        
+//        Numberize
+        
+        NSInteger numberize = [inputStringObject intValue];
+        NSLog(@"Your numberized string is %ld", numberize);
+        
+//        Canadianize
+        NSString *canadian = [inputStringObject stringByAppendingString:@"eh?"];
+        NSLog(@"Your canadianized string is %@", canadian);
+        
+//        Response
+        
+        
+//        De-space it
+        NSString *despaced = [inputStringObject stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+        NSLog(@"Your despaced string is %@", despaced);
+        
+//        printf("What would you like to do with this string?\n");
+//        printf("Make it LOUDER\n");
+//        printf("make it smaller\n");
+//        printf("Numberize it\n");
+//        printf("Canadianize it\n");
+//        printf("See a response\n");
+//        printf("De-space it\n");
         
         
         
