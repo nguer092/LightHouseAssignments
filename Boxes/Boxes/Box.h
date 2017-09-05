@@ -21,8 +21,11 @@
 //Create an instance method that initializes a Box by taking in three floats as parameters. An instance method is a method that applies to a specific instance of a
 //Box, it has a “-” sign at the start of the function name.
 
-- (id)initWithBoxData:(float)height and:(float)width and: (float)length;
+- (instancetype)initWithBoxData:(float)height and:(float)width and: (float)length;
 
 
+//Create a instance method that will calculate the volume and return it as a float. You refer to the properties of an instance by prefixing “self.”
+
+- (float)volume;
 
 @end

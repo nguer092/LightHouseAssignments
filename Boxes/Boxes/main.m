@@ -15,6 +15,8 @@ int main(int argc, const char * argv[]) {
         Box *one = [[Box alloc] initWithBoxData:3.1 and:2.45 and:1.56];
         NSLog(@"%@", one);
         
+        float vol = [one boxVolume];
+        NSLog(@"volume %f", vol);
         
     }
     return 0;

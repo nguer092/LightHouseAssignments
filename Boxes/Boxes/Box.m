@@ -10,19 +10,24 @@
 
 @implementation Box
 
-- (id)initWithBoxData:(float)height and:(float)width and: (float)length
+- (instancetype)initWithBoxData:(float)height and:(float)width and: (float)length
 {
     if (self = [super init]) {
-        height = height;
-        width = width;
-        length = length;
-        
+        _height = height;
+        _length = length;
+        _width = width;
     }
     return self;
     
     
 }
 
+
+- (float)volume
+{
+    float vol = self.height * self.width * self.length;
+    return vol;
+}
 
 
 @end
