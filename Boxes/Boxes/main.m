@@ -13,10 +13,20 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
         Box *one = [[Box alloc] initWithBoxData:3.1 and:2.45 and:1.56];
-        NSLog(@"%@", one);
+        Box *two = [[Box alloc] initWithBoxData:2.3 and:3.0 and:4.7];
         
-        float vol = [one boxVolume];
-        NSLog(@"volume %f", vol);
+        float volOne = [one volume];
+        float volTwo = [two volume];
+        
+        NSLog(@"volume %f", volOne);
+        NSLog(@"volume %f", volTwo);
+        
+        float fitTest = [one fits:two];
+        NSLog(@"%f", fitTest);
+        
+        float fitTestTwo = [two fits:one];
+        NSLog(@"%f", fitTestTwo);
+        
         
     }
     return 0;

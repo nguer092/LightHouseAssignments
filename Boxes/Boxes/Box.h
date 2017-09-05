@@ -28,4 +28,8 @@
 
 - (float)volume;
 
+// Add a method that takes in another box and returns how many times one box will fit inside the other.
+
+- (float)fits:(Box *)boxOne;
+
 @end
