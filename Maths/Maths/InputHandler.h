@@ -11,4 +11,5 @@
 @interface InputHandler : NSObject
 
 -(NSString *)parsed;
+
 @end

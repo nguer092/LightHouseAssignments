@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  QuestionFactory.h
 //  Maths
 //
 //  Created by Nicolas Guerrero on 9/6/17.
@@ -8,6 +8,8 @@
 
 #import "Question.h"
 
-@interface AdditionQuestion : Question
+@interface QuestionFactory : Question
+
+-(Question *)generateRandomQuestion;
 
 @end

@@ -10,6 +10,8 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -19,6 +21,13 @@ int main(int argc, const char * argv[]) {
 //            Score instance outside of loop, because it cannot be recreated every loop, it needs to keep count
         
         ScoreKeeper *score = [[ScoreKeeper alloc] init];
+
+//        QuestionManager instance , which comes initialized with an empty array property called questions
+        
+        QuestionManager * questionManager = [[QuestionManager alloc] init];
+        
+        QuestionFactory * questionFactory = [[QuestionFactory alloc] init];
+        
         
 //        Start game loop
         
@@ -26,7 +35,12 @@ int main(int argc, const char * argv[]) {
         
 //            Create an instance of the questin and log it
             
-        AdditionQuestion *mainQ = [[AdditionQuestion alloc] init];
+            Question *mainQ = [questionFactory generateRandomQuestion];
+            
+        
+//            Make sure to add each question to the questions array
+            
+            [questionManager.questions addObject:mainQ];
    
         NSLog(@"%@", mainQ.question);
             
@@ -54,12 +68,14 @@ int main(int argc, const char * argv[]) {
 //            Update the score instance, and log it by calling the score instance method on it
             score.right ++;
             [score score];
+            [questionManager timeOutput];
             
         } else
         {
             NSLog(@"Wrong!");
             score.wrong ++;
             [score score];
+            [questionManager timeOutput];
         }
 
                         }
