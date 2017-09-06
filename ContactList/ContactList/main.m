@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
 #import "InputHandler.h"
+#import "Contact.h"
+#import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL gameOn = YES;
+        
+        ContactList *phoneBook = [[ContactList alloc] init];
         
         while (gameOn){
   
@@ -24,14 +28,34 @@ int main(int argc, const char * argv[]) {
         InputHandler *result = [[InputHandler alloc] init];
         NSString *parsedResult = [result parsed];
             
-            if([parsedResult isEqualToString:@"quit"])
+        if([parsedResult isEqualToString:@"quit"])
             {
                 gameOn = NO;
                 NSLog(@"Goodbye quitter!");
                 break;
             }
             
+            else if([parsedResult isEqualToString:@"new"])
+            {
+                NSLog(@"Enter the name of the contact you wish to add");
+                InputHandler *contactName = [[InputHandler alloc] init];
+                NSString *parsedContactName = [contactName parsed];
+                NSLog(@"Enter the email of the contact you wish to add");
+                InputHandler *contactEmail = [[InputHandler alloc] init];
+                NSString *parsedContactEmail = [contactEmail parsed];
+                
+                Contact *newContact = [[Contact alloc] init];
+                newContact.name = parsedContactName;
+                newContact.email = parsedContactEmail;
+                
+                [phoneBook addContact:newContact];
+                NSLog(@"%@", phoneBook);
+            }
     }
+        
+        
+        
+        
     }
     return 0;
 }
