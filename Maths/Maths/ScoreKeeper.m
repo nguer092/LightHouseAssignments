@@ -25,7 +25,7 @@
 -(void)score
 {
     
-    NSLog(@"%ld right %ld wrong", self.right, self.wrong);
+    NSLog(@"You have %ld right and %ld wrong", self.right, self.wrong);
 }
 
 @end

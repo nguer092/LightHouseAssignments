@@ -16,24 +16,31 @@ int main(int argc, const char * argv[]) {
         
         BOOL gameOn = YES;
         
+//            Score instance outside of loop, because it cannot be recreated every loop, it needs to keep count
+        
         ScoreKeeper *score = [[ScoreKeeper alloc] init];
+        
+//        Start game loop
         
         while (gameOn){
         
+//            Create an instance of the questin and log it
+            
         AdditionQuestion *mainQ = [[AdditionQuestion alloc] init];
    
         NSLog(@"%@", mainQ.question);
-        
-        
-        NSLog(@"What is the answer?");
-        
+            
+//            Create an instance of Inputhandler and call the "parsed" instance method, which fgets user input in C and parses it to objective C
             
         InputHandler *result = [[InputHandler alloc] init];
             
         NSString *parsedResult = [result parsed];
             
+//            Convert the parsed string into and integer value
         
         NSInteger userInput = [parsedResult intValue];
+            
+//            Use the answer to flow through scoring logic
             
         if([parsedResult isEqualToString:@"quit"])
             {
@@ -43,7 +50,8 @@ int main(int argc, const char * argv[]) {
         
         if (mainQ.answer == userInput)
         {
-            NSLog(@"Right!");
+            NSLog(@"Good job!");
+//            Update the score instance, and log it by calling the score instance method on it
             score.right ++;
             [score score];
             
@@ -54,11 +62,8 @@ int main(int argc, const char * argv[]) {
             [score score];
         }
 
-        }
-        
-    }
-        NSLog(@"Thank you for playing");
-    
+                        }
+        NSLog(@"Once a quitter, always a quitter! Goodbye.");
     return 0;
 }
-
+}
