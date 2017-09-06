@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FizzBuzz.xcscheme</key>
+		<key>ContactList.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01A4DCE91F40A68000032228</key>
+		<key>01A9D1DD1F5F9C090091CDE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
