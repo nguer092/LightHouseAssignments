@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL gameOn = YES;
+        
+        ScoreKeeper *score = [[ScoreKeeper alloc] init];
         
         while (gameOn){
         
@@ -20,17 +24,18 @@ int main(int argc, const char * argv[]) {
    
         NSLog(@"%@", mainQ.question);
         
-        char stringOne [255];
         
         NSLog(@"What is the answer?");
         
-        fgets(stringOne, 255, stdin);
-        
-        NSString *result = [NSString stringWithCString:stringOne encoding:NSUTF8StringEncoding];
-        
-        NSInteger userInput = [result intValue];
             
-        if((result = @"quit"))
+        InputHandler *result = [[InputHandler alloc] init];
+            
+        NSString *parsedResult = [result parsed];
+            
+        
+        NSInteger userInput = [parsedResult intValue];
+            
+        if([parsedResult isEqualToString:@"quit"])
             {
                 gameOn = NO;
                 break;
@@ -39,12 +44,18 @@ int main(int argc, const char * argv[]) {
         if (mainQ.answer == userInput)
         {
             NSLog(@"Right!");
+            score.right ++;
+            [score score];
+            
         } else
         {
             NSLog(@"Wrong!");
+            score.wrong ++;
+            [score score];
         }
 
         }
+        
     }
         NSLog(@"Thank you for playing");
     
