@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Interacting With Users.xcscheme</key>
+		<key>Patient &amp; Doctor.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>011F58A81F40F253005BAF4B</key>
+		<key>015A584C1F6199FE00C74184</key>
 		<dict>
 			<key>primary</key>
 			<true/>

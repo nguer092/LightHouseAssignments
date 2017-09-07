@@ -16,9 +16,6 @@
     return sum + index * index;
 }
 
-- (void)sum2Sqaure:(int)sum withIndex:(int)index
-{
-    self.
-}
+
 
 @end
