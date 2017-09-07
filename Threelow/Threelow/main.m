@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
         
         char sayRoll [255];
         char hold [255];
+        char sure [255];
         BOOL gameOn = YES;
 
 //        Make five instances of the Dice class, randomize their values and print them
@@ -38,11 +39,9 @@ int main(int argc, const char * argv[]) {
 //        Threelow
         NSLog(@"Welcome to Threelow");
         
-        if (gameOn) {
+        while (gameOn) {
             
         NSLog(@"Roll the dice");
-        
-//        When a user inputs the word roll, randomize the values and print them.
         
         fgets(sayRoll, 255 ,stdin);
         
@@ -63,14 +62,26 @@ int main(int argc, const char * argv[]) {
             NSString *holdDice = [NSString stringWithCString:hold encoding:NSUTF8StringEncoding];
             holdDice = [holdDice stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             int holding = [holdDice intValue];
+
+            NSLog(@"You are holding dice [%i] , are you sure you want to hold this die? Yes or No?", holding);
             
+            fgets(sure, 255, stdin);
+            
+            NSString *sureDice = [NSString stringWithCString:sure encoding:NSUTF8StringEncoding];
+            sureDice = [sureDice stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            if ([sureDice isEqual: @"yes"]){
+
             [gameController heldDie:holding];
             
-//            You will need to visually indicate which dice have been "held". Consider bracketing [] the held values when you print them out.
             NSLog(@"You are holding dice [%i]", holding);
-
-    }
-    
+                
+            
+            } else {
+                NSLog(@"You are no longer holding any die");
+                
+            }
+}
     return 0;
 }
 }
