@@ -15,4 +15,9 @@
 -(instancetype)initWithName:(NSString *)name and:(NSString *)specialization;
 
 
+//The doctor should keep track of all their accepted patients. Think about which collection type is best suited to this task.
+
+@property (nonatomic, strong) NSMutableSet *acceptedPatients;
+
+
 @end

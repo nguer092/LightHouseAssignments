@@ -14,6 +14,9 @@
     return [NSString stringWithFormat:@"Doctors name and age: %@ - %@", _name, _specialization];
 }
 
+
+//Create custom initializers for both the Doctor and Patient class. Use the custom initializer to signal to other coders using your classes how they are to be used.
+
 -(instancetype)initWithName:(NSString *)name and:(NSString *)specialization{
         if (self = [super init]) {
             _name = name;
