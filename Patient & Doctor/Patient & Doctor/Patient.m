@@ -63,6 +63,8 @@
         
         NSLog(@"Here are your medications for %@", symptons);
         
+        [doctor.prescriptionList setObject:(@"Prescription for %@",symptons) forKey:doctor.name];
+        
     } else {
         NSLog(@"Sorry I can only prescribe medications to existing patients.");
     }

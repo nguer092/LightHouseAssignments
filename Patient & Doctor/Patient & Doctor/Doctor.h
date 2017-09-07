@@ -20,4 +20,8 @@
 @property (nonatomic, strong) NSMutableSet *acceptedPatients;
 
 
+//Anyway, once the doctor writes the prescription, before handing it the patient, the doctor should add it the collection of prescriptions written by any doctor. What type of collection is best suited to this problem?
+
+@property (nonatomic, strong) NSMutableDictionary *prescriptionList;
+
 @end

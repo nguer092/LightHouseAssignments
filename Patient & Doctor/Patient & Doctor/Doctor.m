@@ -21,6 +21,7 @@
         if (self = [super init]) {
             _name = name;
             _specialization = specialization;
+            _prescriptionList = self.prescriptionList;
             NSLog(@"%@", self);
         }
         return self;
