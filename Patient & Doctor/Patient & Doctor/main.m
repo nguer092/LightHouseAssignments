@@ -12,16 +12,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+
         Doctor *oz = [[Doctor alloc] initWithName:@"Oz" and:@"BrainSurgeon"];
         Patient *nick = [[Patient alloc] initWithName:@"Nick" and:25];
         
-        [nick visitDoctor:oz];
         nick.healthCard = YES;
         [nick visitDoctor:oz];
+        NSLog(@"%@", oz.acceptedPatients);
         
-    
-        
+        [nick requestMedication:oz];
         
     }
     return 0;

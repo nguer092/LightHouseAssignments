@@ -26,5 +26,13 @@
         return self;
     }
 
+- (NSMutableSet *)acceptedPatients {
+    if (!_acceptedPatients) {
+        _acceptedPatients = [[NSMutableSet alloc] init];
+    }
+    
+    return _acceptedPatients;
+}
+
 
 @end

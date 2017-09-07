@@ -20,4 +20,8 @@
 
 -(void)visitDoctor:(Doctor *)doctor;
 
+//A patient can request medication from the doctor. The patient will do this by calling requestMedication on the doctor instance.
+
+-(void)requestMedication:(Doctor *)doctor;
+
 @end
