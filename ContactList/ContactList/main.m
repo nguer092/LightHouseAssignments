@@ -26,6 +26,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", menu);
             
         InputHandler *result = [[InputHandler alloc] init];
+            
         NSString *parsedResult = [result parsed];
             
         if([parsedResult isEqualToString:@"quit"])
@@ -49,13 +50,17 @@ int main(int argc, const char * argv[]) {
                 newContact.email = parsedContactEmail;
                 
                 [phoneBook addContact:newContact];
-                NSLog(@"%@", phoneBook);
+                NSLog(@"%@", phoneBook.contactList);
+            
+            } else if ([parsedResult isEqualToString:@"list"])
+            {
+                
+                NSLog(@"%@", phoneBook.contactList);
+                
             }
+            
+            
     }
-        
-        
-        
-        
     }
     return 0;
 }
