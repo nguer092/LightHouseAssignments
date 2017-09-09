@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		019092A21F64468700A79D24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 019092A11F64468700A79D24 /* main.m */; };
 		019092AA1F64469800A79D24 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 019092A91F64469800A79D24 /* Vehicle.m */; };
+		019092AD1F64559F00A79D24 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 019092AC1F64559F00A79D24 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		019092A11F64468700A79D24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		019092A81F64469800A79D24 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 		019092A91F64469800A79D24 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		019092AB1F64559F00A79D24 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		019092AC1F64559F00A79D24 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				019092A11F64468700A79D24 /* main.m */,
+				019092AB1F64559F00A79D24 /* Car.h */,
+				019092AC1F64559F00A79D24 /* Car.m */,
 				019092A81F64469800A79D24 /* Vehicle.h */,
 				019092A91F64469800A79D24 /* Vehicle.m */,
 			);
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019092AD1F64559F00A79D24 /* Car.m in Sources */,
 				019092AA1F64469800A79D24 /* Vehicle.m in Sources */,
 				019092A21F64468700A79D24 /* main.m in Sources */,
 			);

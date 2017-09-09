@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Vehicle.h"
+#import "Car.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,7 +23,13 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Vehicle go forward: %@", [vehicle goForward]);
             NSLog(@"Vehicle go backward: %@", [vehicle goBackward]);
             NSLog(@"Vehicle stop moving: %@", [vehicle stopMoving]);
-            
+        
+            Car *car = [[Car alloc] init];
+            NSLog(@"Vehicle make noise: %@", [car makeNoise]);
+            NSLog(@"Vehicle go forward: %@", [car goForward]);
+            NSLog(@"Vehicle go backward: %@", [car goBackward]);
+            NSLog(@"Vehicle stop moving: %@", [car stopMoving]);
+        
   
     }
     return 0;
